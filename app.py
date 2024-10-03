@@ -12,11 +12,11 @@ args=parser.parse_args()
 # TODO: do something with the content
 
 result = csv.writer(sys.stdout, lineterminator='\n')
-result.writerow(['rate_name', 'class', 'quality', 'bathroom', 'bedding', 'capacity', 'club', 'bedrooms', 'balcony', 'view', 'floor'])
+result.writerow(['rate_name', 'class', 'quality', 'bathroom', 'bedding', 'capacity', 'club', 'balcony', 'view'])
 
 with open(args.content) as f:
     reader = csv.reader(f)
     next(reader)
     for row in reader:
-        result.writerow(['Test Room', 'villa', 'deluxe', 'private bathroom', 'bunk bed', 'double', 'not club', '1 bedroom', 'with balcony', 'mountain view', 'attic floor'])
+        result.writerow(['Test Room', 'villa', 'deluxe', 'private bathroom', 'bunk bed', 'double', 'not club', 'with balcony', 'mountain view'])
 
